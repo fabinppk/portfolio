@@ -1,0 +1,199 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  padding: 10px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+  box-sizing: border-box;
+	font-family: 'Karla', sans-serif;
+  font-weight: 100;
+	color: #4a5a67;
+}
+
+button{
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+}
+
+img{
+  max-width: 100%;
+}
+
+/****end of resets ****/
+
+body{
+  background-color: #f5f6f9;
+}
+
+.swiper-button-next{
+	background-image: url('../images/arrow-next.svg');
+	background-size: 40px;
+	left: auto;
+	right: 0;
+}
+
+.swiper-button-prev{
+	background-image: url('../images/arrow-next.svg');
+	transform: rotate(180deg);
+	background-size: 40px;
+	left: 0;
+}
+
+.swiper-container.project{
+  padding-bottom: 32px;
+}
+
+.swiper-container.project img{
+  max-height: 350px;
+	max-width: calc(100% - 58px);
+  box-shadow: 0px 19px 60px -9px rgba(140,140,140,1);
+}
+
+.swiper-container.project .swiper-slide{
+	text-align: center;
+	margin: auto;
+}
+
+h1.title{
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h2.sub-title{
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0;
+  width: 100%;
+  line-height: 1;
+  display: block;
+}
+
+h3.title-project{
+  font-size: 30px;
+}
+
+h4.sub-title-project{
+	padding: 26px 0;
+  font-size: 20px;
+  line-height: 28px;
+  color: #8f9296;
+}
+
+button.ver-projeto{
+	padding: 14px 55px;
+  background-color: #4d5971;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+section.box-project{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 6vw 10vw 3vw 10vw;
+	opacity: 0;
+	transition: opacity .6s ease .2s, transform .5s ease .2s;
+	transform: scale(.3);
+}
+
+div.separator{
+	width: 30vw;
+	height: 1px;
+	background: #a7b6c1;
+	margin: auto;
+}
+
+section.box-project.show{
+	opacity: 1;
+	transform: scale(1);
+}
+
+section.box-project .left{
+  width: calc(50% - 4vw);
+  align-self: center;
+	margin-right: 4vw;
+	padding-right: 4vw;
+}
+
+section.box-project .right{
+  width: calc(50% - 4vw);
+  align-self: center;
+	margin-left: 4vw;
+}
+
+section.box-project.invert .left{
+	align-self: center;
+	margin-left: 4vw;
+	padding-left: 4vw;
+	text-align: right;
+	margin-right: 0;
+  padding-right: 0;
+	order: 1;
+}
+
+section.box-project.invert .right{
+	margin-right: 4vw;
+	margin-left: 0;
+}
+
+@media (max-width: 960px){
+	section.box-project .left{
+		width: 100%;
+		margin-right: 0;
+		padding-right: 0;
+		margin-bottom: 5vw;
+		text-align: center;
+	}
+
+	section.box-project .right{
+		width: 100%;
+		margin-left: 0;
+	}
+
+	h1.title{
+		margin-bottom: 5vw;
+	}
+}
